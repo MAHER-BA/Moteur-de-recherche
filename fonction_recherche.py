@@ -17,6 +17,6 @@ class rechercher :
     for  (k,features) in self.index.items():
       s = bm_25 (features, queryFeatures)
       resultats [k] = s
-      resultats = sorted(resultats,reverse=True)
-      for i in range (10) :
+    resultats = sorted(resultats,reverse=True)
+    for i in range (10) :
         return resultats [i]
