@@ -12,7 +12,7 @@ app.get('/serveur', function(req, res) {
   }
 });
  
-app.listen(80);
+app.listen(80);                                  /* le port de notre serveur*/
 console.log('App listening on port 80...');
 
 
