@@ -9,14 +9,14 @@ Original file is located at
 
 class rechercher :
   def _init_(self,index):
-    self.index = index          #stocker notre index
+    self.index = index                          #stocker notre index
 
   def recherche (self,queryFeatures):
-    resultats = {}              #initialiser notre dictionnaire de résultats
+    resultats = {}                              #initialiser notre dictionnaire de résultats
 
     for  (k,features) in self.index.items():
-      s = bm_25 (features, queryFeatures)
+      s = bm_25 (features, queryFeatures)       # s est notre score calculé par la fonction bm_25
       resultats [k] = s
-    resultats = sorted(resultats,reverse=True)
+    resultats = sorted(resultats,reverse=True)  # trier notre table résultats en ordre décroissant
     for i in range (10) :
-        return resultats [i]
+        return resultats [i]                    # renvoyer les dix première valeurs
